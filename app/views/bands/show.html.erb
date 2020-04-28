@@ -1,0 +1,16 @@
+<h1><%= @band.name %></h1>
+
+<h3>Album: <%= @band.album_title %></h3>
+
+<h3>Date formed:</h3>
+<p><%= @band.date_started %></p>
+
+<%= link_to 'Back', bands_path %>
+
+<%= link_to 'Edit', edit_band_path(@band) %>
+
+<%= link_to 'Delete', band_path(@band), method: :delete, data: { confirm: "Really want to delete #{@band.name}?"} %>
+
+<%= link_to 'Back', bands_path %>
+
+

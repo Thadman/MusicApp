@@ -1,0 +1,27 @@
+<%= form_with model: @band, local: true do|form| %>
+
+<div class="form-container">
+  <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+  </div>
+
+  <div>
+      <%= form.label :album_title %>
+      <%= form.text_field :album_title %>
+  </div>
+
+  <div>
+      <%= form.label :date_started %>
+      <%= date_field(:user, :born_on) %>
+  </div>
+  <div>
+      <%= form.label :picture %> 
+      <%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>
+
