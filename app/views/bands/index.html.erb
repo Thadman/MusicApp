@@ -2,12 +2,12 @@
 
 <div class="row justify-content-around">
   <% @bands.each do |band| %>
-    <p><%= link_to band.name, band_path(band) %> : <%= band.album_title %></p>
-    <%= render 'card', band:band %>
+    <%= render 'card', band: band %>
   <% end %>
 
 </div>
 
 <%# <%= link_to "edit", edit_band_path(band.id) if current_user.id == band.id %> 
+<%# <p><%= link_to band.name, band_path(band) : <%= band.album_title</p> %> 
 
 
