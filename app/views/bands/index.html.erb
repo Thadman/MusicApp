@@ -1,12 +1,13 @@
 <h1>All Bands</h1>
 
+<div class="row justify-content-around">
+  <% @bands.each do |band| %>
+    <p><%= link_to band.name, band_path(band) %> : <%= band.album_title %></p>
+    <%= render 'card', band:band %>
+  <% end %>
 
-<% @bands.each do |band| %>
-<p><%= link_to band.name, band_path(band) %> : <%= band.album_title %></p>
-<% end %>
+</div>
 
-<%= link_to 'Add A Band', new_band_path %>
-
-
+<%# <%= link_to "edit", edit_band_path(band.id) if current_user.id == band.id %> 
 
 

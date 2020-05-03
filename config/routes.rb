@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root to: "bands#index"  
   
   resources :bands
   
-  root to: "bands#index"  
+  devise_for :users 
 
   # post "/bands/create", to: "bands#create"
   # get "/bands/new", to: "bands#new", as: "bands_new"
